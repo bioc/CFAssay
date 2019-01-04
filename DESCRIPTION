@@ -1,7 +1,7 @@
 Package: CFAssay
 Type: Package
 Title: Statistical analysis for the Colony Formation Assay
-Version: 1.16.0
+Version: 1.16.1
 Date: 2017-02-10
 Author: Herbert Braselmann
 Maintainer: Herbert Braselmann <braselm@helmholtz-muenchen.de>
@@ -11,4 +11,4 @@ Description: The package provides functions for calculation of
         experimental 2-way designs along with the colony formation
         assay.
 License: LGPL
-biocViews: CellBasedAssays, CellBiology, Regression, Survival
+biocViews: ImmunoOncology, CellBasedAssays, CellBiology, Regression, Survival
