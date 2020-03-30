@@ -31,15 +31,19 @@ A numerical matrix with two rows, the first row containing the survival fraction
 \examples{
 datatab <- read.table(system.file("doc", "expl1_cellsurvcurves.txt", package="CFAssay"), header=TRUE, sep="\t")
 X <- subset(datatab, cline=="okf6TERT1")
+## S0 from data with fucntion pes
 S0 <- pes(X)$pe  #observed plating efficiencies
 length(S0)==length(unique(X$Exp)) #length ok?
 names(S0) <- pes(X)$Exp
 sfpmean(X, S0)
+\dontrun{
+## S0 from LQ model fit
 fit <- cellsurvLQfit(X)
 fit$coef  #contains fitted log-pe
 grep("Exp",names(fit$coef))
 S01 <- exp(fit$coef[1:8])  #fitted pe
-sfpmean(X, S01)
+sfpmean(X, S01) #names of S01 still to adjust!
+}
 \dontrun{sfpmean(X)}  #yields an error for this data set
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
